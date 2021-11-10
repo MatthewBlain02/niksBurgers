@@ -51,17 +51,12 @@ table {
 .nav-link{
     margin: 0em 1em;
 }
-.btn{
-    margin-left: 42%;
-}
+
 .card-img-top{
     width: 200px;
     height: 200px;
 }
-.logo{
-    width: 25em;
-    height: 25em;
-}
+
 #carouselExampleFade{
     margin: 0em 10em;
 }

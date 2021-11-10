@@ -12,27 +12,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Niks Burgers | Home</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="img/logo.png"width="25" height="25" class="d-inline-block align-top" alt="">
-        Niks Burgers
-    </a>
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav me-2">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Order</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Niks Burgers</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Order</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Sign Up</a></li>
+            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 <!-- Carousel -->
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -58,32 +70,37 @@
 </div>
 <!-- Welcome Text And Image -->
 <div class="row align-items-center">
-    <div class="col mx-5">
+    <div class="col mx-5 text-center">
         <h1 class="display-2 text-center">Welcome To Niks Burgers</h1>
         <p class="lead text-center mt-3">100% Irish Beef | Only Use Quality Food</p>
-        <button type="button" class="btn btn-outline-primary mt-5">Order</button>
+        <a href="#" class="btn btn-primary mt-4">Order Now!</a>
     </div>
-    <div class="col me-5">
-        <img class="logo" src="img/NiksBurgersLogo.png" alt="">
+    <div class="col me-5 text-center ms-5 mt-4">
+        <img class="img-thumbnail" src="img/NiksBurgersLogo.png" alt="">
     </div>
+</div>
     <!-- Cards -->
-    <div class="row align-items-center">
-    <div class="col card border-info mx-5" style="width: 18rem;">
-        <img src="img/cow.jpg" class="card-img-top text-center rounded mx-auto" alt="...">
+    <div class="container mt-4">
+  <div class="row">
+    <div class="col">
+      <div class="card border-info mx-5">
+        <img src="img/cow.jpg" class="card-img-top rounded mx-auto" alt="...">
         <div class="card-body">
-            <p class="card-text mx-5 text-center">Our Beef Comes From The Famous Sherlock's Butchers Fresh Everyday.</p>
+            <p class="card-text text-center">Our Beef Comes From The Famous Sherlock's Butchers Fresh Everyday.</p>
         </div>
     </div>
-        <div class="col card border-info mx-5" style="width: 18rem;">
-            <img src="img/veg.jpg" class="card-img-top text-center rounded mx-auto" alt="...">
+    </div>
+    <div class="col">
+      <div class="card border-info mx-5">
+            <img src="img/veg.jpg" class="card-img-top rounded mx-auto" alt="...">
             <div class="card-body">
-                <p class="card-text mx-5 text-center">We Get Fresh Food Delivered Everyday To Ensure We Give The Best Food.</p>
+                <p class="card-text text-center">We Get Fresh Food Delivered Everyday To Ensure We Give The Best Food.</p>
             </div>
         </div>
     </div>
-    </div>
+  </div>  
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4">
+<footer class="page-footer font-small unique-color-dark pt-4 bg-primary mt-4">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -94,7 +111,7 @@
                 <h5 class="mb-2">Order Some Grub</h5>
             </li>
             <li class="list-item d-block">
-                <a href="#" class="link-primary">Order Now!</a>
+                <a href="#" class="link-info">Order Now!</a>
             </li>
         </ul>
         <!-- Call to action -->
