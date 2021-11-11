@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Google Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Niks Burgers | Home</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Niks Burgers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Order</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Menu -->
+<h3 class="text-center m-4">All Food Below Is Served With A Milkshake Of Your Choice</h3>
+<div class="d-flex flex-column">
+    <div class="d-flex justify-content-center">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/BetterBurger.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <div class="d-inline-flex">
+                            <h5 class="card-title">The Better Burger</h5>
+                            <p class="price" class="ms-5">€10.00</p>
+                        </div>
+                        <p class="card-text"> Quarter Pounder with lettuce,
+                            caramelised red onion, our secret big 5 sauce
+                            and sliced of smoked bacon and cheese</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle mt-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Edit Food
+                            </button>
+                            <form class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="better-burger-form">
+                                <h5>Better Burger</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="CHEESE" id="cheese" checked>
+                                    <label class="form-check-label" for="cheese">
+                                        Cheese
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="BACON" id="bacon" checked>
+                                    <label class="form-check-label" for="bacon">
+                                        Bacon
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ONION" id="onion"checked>
+                                    <label class="form-check-label" for="onion">
+                                        Onion
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="LETTUCE" id="lettuce"checked>
+                                    <label class="form-check-label" for="lettuce">
+                                        Lettuce
+                                    </label>
+                                </div>
+                                <h5 class="mt-1">Sauce</h5>
+                                <div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="BIG-5-SAUCE" name="flexRadioDefault1" id="big-5-sauce"checked>
+                                        <label class="form-check-label" for="big-5-sauce">
+                                            Big 5 Sauce
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="TOMATO-KETCHUP" name="flexRadioDefault1" id="tomato-ketchup">
+                                        <label class="form-check-label" for="tomato-ketchup">
+                                            Tomato Ketchup
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5 class="mt-2">Milkshakes</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="kinder-bueno" value="KINDER-BUENO">
+                                        <label class="form-check-label" for="kinder-bueno">
+                                            Kinder Bueno
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="nutella" value="NUTELLA">
+                                        <label class="form-check-label" for="nutella">
+                                            Nutella
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="oreo" value="OREO">
+                                        <label class="form-check-label" for="oreo">
+                                            Oreo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter" value="PEANUT-BUTTER">
+                                        <label class="form-check-label" for="peanut-butter">
+                                            Peanut Butter
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter-nutella" value="PEANUT-BUTTER-NUTELLA">
+                                        <label class="form-check-label" for="peanut-butter-nutella">
+                                            Peanut Butter & Nutella
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="biscoff" value="BISCOFF">
+                                        <label class="form-check-label" for="biscoff">
+                                            Biscoff
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="strawberry" value="STRAWBERRY" checked>
+                                        <label class="form-check-label" for="strawberry">
+                                            Strawberry
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="btn btn-primary mt-1" type="submit" form="better-burger-form">Add To Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/BetterBurger.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <div class="d-inline-flex">
+                            <h5 class="card-title">Funky Chips</h5>
+                            <p class="price" class="ms-5">€7.00</p>
+                        </div>
+                        <p class="card-text"> Homemade Chunky Chips with smoked bacon bits, sour cream and freshly chopped
+                            spring onion</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle mt-5" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Edit Food
+                            </button>
+                            <form class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="funky-chips-form">
+                                <h5>Funky Chips</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="BACON-BITS" id="bacon-bits" checked>
+                                    <label class="form-check-label" for="bacon-bits">
+                                        Bacon Bits
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="SPRING-ONION" id="spring-onion" checked>
+                                    <label class="form-check-label" for="spring-onion">
+                                        Spring Onion
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="SPRING-ONION" id="shredded-cheese">
+                                    <label class="form-check-label" for="shredded-cheese">
+                                        Shredded Cheese
+                                    </label>
+                                </div>
+                                <h5 class="mt-1">Sauce</h5>
+                                <div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="SOUR-CREAM" name="flexRadioDefault1" id="sour-cream"checked>
+                                        <label class="form-check-label" for="sour-cream">
+                                            Sour Cream
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="CURRY-SAUCE" name="flexRadioDefault1" id="curry-sauce">
+                                        <label class="form-check-label" for="curry-sauce">
+                                            Curry Sauce
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="GARLIC-SAUCE" name="flexRadioDefault1" id="garlic-sauce">
+                                        <label class="form-check-label" for="garlic-sauce">
+                                            Garlic Sauce
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="BIG-5-SAUCE" name="flexRadioDefault1" id="big-5-sauce-fc">
+                                        <label class="form-check-label" for="big-5-sauce-fc">
+                                            Big 5 Sauce
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5 class="mt-2">Milkshakes</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="kinder-bueno2" value="KINDER-BUENO">
+                                        <label class="form-check-label" for="kinder-bueno2">
+                                            Kinder Bueno
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="nutella2" value="NUTELLA">
+                                        <label class="form-check-label" for="nutella2">
+                                            Nutella
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="oreo2" value="OREO">
+                                        <label class="form-check-label" for="oreo2">
+                                            Oreo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter2" value="PEANUT-BUTTER">
+                                        <label class="form-check-label" for="peanut-butter2">
+                                            Peanut Butter
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter-nutella2" value="PEANUT-BUTTER-NUTELLA">
+                                        <label class="form-check-label" for="peanut-butter-nutella2">
+                                            Peanut Butter & Nutella
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="biscoff2" value="BISCOFF">
+                                        <label class="form-check-label" for="biscoff2">
+                                            Biscoff
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="strawberry2" value="STRAWBERRY" checked>
+                                        <label class="form-check-label" for="strawberry2">
+                                            Strawberry
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="btn btn-primary mt-1" type="submit" form="funky-chips-form">Add To Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="img/BetterBurger.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="d-inline-flex">
+                        <h5 class="card-title">Funky Chips</h5>
+                        <p class="price" class="ms-5">€7.00</p>
+                    </div>
+                    <p class="card-text"> Homemade Chunky Chips with smoked bacon bits, sour cream and freshly chopped
+                        spring onion</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mt-5" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Edit Food
+                        </button>
+                        <form class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="funky-chips-form">
+                            <h5>Better Burger</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="BACON-BITS" id="bacon-bits" checked>
+                                <label class="form-check-label" for="bacon-bits">
+                                    Bacon Bits
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="SPRING-ONION" id="spring-onion" checked>
+                                <label class="form-check-label" for="spring-onion">
+                                    Spring Onion
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="SPRING-ONION" id="shredded-cheese">
+                                <label class="form-check-label" for="shredded-cheese">
+                                    Shredded Cheese
+                                </label>
+                            </div>
+                            <h5 class="mt-1">Sauce</h5>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="SOUR-CREAM" name="flexRadioDefault1" id="sour-cream"checked>
+                                    <label class="form-check-label" for="sour-cream">
+                                        Sour Cream
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="CURRY-SAUCE" name="flexRadioDefault1" id="curry-sauce">
+                                    <label class="form-check-label" for="curry-sauce">
+                                        Curry Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="GARLIC-SAUCE" name="flexRadioDefault1" id="garlic-sauce">
+                                    <label class="form-check-label" for="garlic-sauce">
+                                        Garlic Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="BIG-5-SAUCE" name="flexRadioDefault1" id="big-5-sauce-fc">
+                                    <label class="form-check-label" for="big-5-sauce-fc">
+                                        Big 5 Sauce
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h5 class="mt-2">Milkshakes</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="kinder-bueno2" value="KINDER-BUENO">
+                                    <label class="form-check-label" for="kinder-bueno2">
+                                        Kinder Bueno
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="nutella2" value="NUTELLA">
+                                    <label class="form-check-label" for="nutella2">
+                                        Nutella
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="oreo2" value="OREO">
+                                    <label class="form-check-label" for="oreo2">
+                                        Oreo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter2" value="PEANUT-BUTTER">
+                                    <label class="form-check-label" for="peanut-butter2">
+                                        Peanut Butter
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="peanut-butter-nutella2" value="PEANUT-BUTTER-NUTELLA">
+                                    <label class="form-check-label" for="peanut-butter-nutella2">
+                                        Peanut Butter & Nutella
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="biscoff2" value="BISCOFF">
+                                    <label class="form-check-label" for="biscoff2">
+                                        Biscoff
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="strawberry2" value="STRAWBERRY" checked>
+                                    <label class="form-check-label" for="strawberry2">
+                                        Strawberry
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <button class="btn btn-primary mt-1" type="submit" form="funky-chips-form">Add To Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4 bg-primary mt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Call to action -->
+        <ul class="list-unstyled text-center">
+            <li class="list-item text-center">
+                <h5 class="mb-2">Order Some Grub</h5>
+            </li>
+            <li class="list-item d-block">
+                <a href="#" class="link-info">Order Now!</a>
+            </li>
+        </ul>
+        <!-- Call to action -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</html>
