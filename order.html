@@ -36,16 +36,38 @@
                         Account
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Sign Up</a></li>
-                        <li><a class="dropdown-item" href="#">Login</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                        <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="login.html">Login</a></li>
                     </ul>
                 </li>
+                <li><a class="nav-link" href="contact.html">Customer Support</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<!-- Cart DropDown -->
+<div class="dropdown ms-4 mt-4">
+    <button class="btn btn-primary dropdown-toggle d-flex" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Cart<p class="mx-3" id="totalItemsInCart">0</p>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="cartDropdown">
+        <div class="text-center">
+            <h3 class="mb-2">Cart</h3>
+        </div>
+        <div id="cart" class="text-center">
+
+
+        </div>
+        <div class="text-center">
+            <p>Total :</p>
+            <label id="total">0.00</label>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-success" onclick="Checkout()" href="checkout.html">CheckOut</a>
+            <button class="btn btn-danger m-2" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+</div>
 <!-- Menu -->
 <h3 class="text-center m-4">All Food Below Is Served With A Milkshake Of Your Choice</h3>
 <div class="d-flex flex-column">
@@ -59,7 +81,7 @@
                     <div class="card-body">
                         <div class="d-inline-flex">
                             <h5 class="card-title" id="better-burger-itemName">The Better Burger</h5>
-                            <p class="price" class="ms-5" id="better-burger-price">10.00</p>
+                        <p class="ms-2">€</p><p class="price" class="ms-5" id="better-burger-price">10.00</p>
                         </div>
                         <p class="card-text"> Quarter Pounder with lettuce,
                             caramelised red onion, our secret big 5 sauce
@@ -174,7 +196,7 @@
                     <div class="card-body">
                         <div class="d-inline-flex">
                             <h5 class="card-title" id="funky-chips-itemName">Funky Chips</h5>
-                            <p class="price" class="ms-5" id="funky-chips-price">7.00</p>
+                            <p class="ms-2">€</p><p class="price" class="ms-5" id="funky-chips-price">7.00</p>
                         </div>
                         <p class="card-text"> Homemade Chunky Chips with smoked bacon bits, sour cream and freshly chopped
                             spring onion</p>
@@ -231,7 +253,7 @@
                                 </div>
 
                                 <div>
-                                    <h5 class="mt-2">items</h5>
+                                    <h5 class="mt-2">Milkshake</h5>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="funky-chips-milkshake" id="kinder-bueno2" value="Kinder-Bueno-Milkshake">
                                         <label class="form-check-label" for="kinder-bueno2">
@@ -294,7 +316,7 @@
                 <div class="card-body">
                     <div class="d-inline-flex">
                         <h5 class="card-title" id="bbq-ribby-itemName">The BBQ Ribby</h5>
-                        <p class="price" class="ms-5" id="bbq-ribby-price">9.00</p>
+                        <p class="ms-2">€</p><p class="price" class="ms-5" id="bbq-ribby-price">9.00</p>
                     </div>
                     <p class="card-text"> Slow cooked half sheet of ribs marinated in our homemade bbq sauce with caramelised red onion and smoked bacon</p>
                     <div class="dropdown">
@@ -324,7 +346,7 @@
                             <h5 class="mt-1">Sauce</h5>
                             <div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="bbq-ribby-item" value="BBQ" id="bbq" checked>
+                                    <input class="form-check-input" type="radio" name="bbq-ribby-item" value="BBQ" id="bbq" disabled checked>
                                     <label class="form-check-label" for="bbq">
                                         BBQ Sauce
                                     </label>
@@ -332,7 +354,7 @@
                             </div>
 
                             <div>
-                                <h5 class="mt-2">items</h5>
+                                <h5 class="mt-2">Milkshakes</h5>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="bbq-ribby-milkshake" id="kinder-bueno3" value="KINDER-BUENO">
                                     <label class="form-check-label" for="kinder-bueno3">
@@ -384,26 +406,132 @@
         </div>
     </div>
 </div>
+<h4 class="text-center mb-2">Sides And Drinks</h4>
+<div class="d-flex justify-content-center">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="img/onionrings.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="d-inline-flex">
+                        <h5 class="card-title" id="onion-rings-itemName">Our Famous Onion Rings</h5>
+                        <p class="ms-2">€</p><p class="price" class="ms-5" id="onion-rings-price">4.00</p>
+                    </div>
+                    <p class="card-text"> Red Onion Dunked In Our Famous Beer Batter Fried To Perfection | Served With A Dip Of Your Choice</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mt-5" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                            Edit Food
+                        </button>
+                        <form class="dropdown-menu" aria-labelledby="dropdownMenuButton3" id="onion-rings-form">
+                            <h5 class="mt-1">Sauce</h5>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="onion-rings-item" value="BBQ" id="onion-rings-bbq" checked>
+                                    <label class="form-check-label" for="onion-rings-bbq">
+                                        BBQ Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="onion-rings-item" value="GARLIC" id="onion-rings-garlic" checked>
+                                    <label class="form-check-label" for="onion-rings-garlic">
+                                        Garlic Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="onion-rings-item" value="BIG 5" id="onion-rings-big5" checked>
+                                    <label class="form-check-label" for="onion-rings-big5">
+                                        Big 5 Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="onion-rings-item" value="TOMATO-KETCHUP" id="onion-rings-tomato" checked>
+                                    <label class="form-check-label" for="onion-rings-tomato">
+                                        Tomato Ketchup
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <button class="btn btn-primary mt-1" type="button" onclick="addToCart('onion-rings')" form="onion-rings-form">Add To Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="img/milkshake.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="d-inline-flex">
+                        <h5 class="card-title" id="milkshake-itemName">Milkshake</h5>
+                        <p class="ms-2">€</p><p class="price" class="ms-5" id="milkshake-price">3.00</p>
+                    </div>
+                    <p class="card-text">Choose an option below and we will make into a delicious milkshake</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mt-5" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                            Edit Food
+                        </button>
+                        <form class="dropdown-menu" aria-labelledby="dropdownMenuButton3" id="milkshake-form">
+                                <h5 class="mt-2">Milkshakes</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="kinder-bueno5" value="KINDER-BUENO">
+                                    <label class="form-check-label" for="kinder-bueno5">
+                                        Kinder Bueno
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="nutella5" value="NUTELLA">
+                                    <label class="form-check-label" for="nutella5">
+                                        Nutella
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="oreo5" value="OREO">
+                                    <label class="form-check-label" for="oreo5">
+                                        Oreo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="peanut-butter5" value="PEANUT-BUTTER">
+                                    <label class="form-check-label" for="peanut-butter5">
+                                        Peanut Butter
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="peanut-butter-nutella5" value="PEANUT-BUTTER-NUTELLA">
+                                    <label class="form-check-label" for="peanut-butter-nutella5">
+                                        Peanut Butter & Nutella
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="biscoff5" value="BISCOFF">
+                                    <label class="form-check-label" for="biscoff5">
+                                        Biscoff
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="milkshake-milkshake" id="strawberry5" value="STRAWBERRY" checked>
+                                    <label class="form-check-label" for="strawberry5">
+                                        Strawberry
+                                    </label>
+                                </div>
+                        </form>
+                            </div>
+                    </div>
+                    <button class="btn btn-primary ms-3" type="button" onclick="addToCart('milkshake')" form="bbq-ribby-form">Add To Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-</div>
-<!-- CART -->
-<div class="text-center">
-    <h3 class="mb-2">Cart</h3>
-</div>
-<div id="cart" class="text-center">
-
-
-</div>
-<div class="text-center">
-    <p>Total :</p>
-    <label id="total">0.00</label>
-</div>
-<div class="text-center">
-    <button class="btn btn-success">CheckOut</button>
-    <button class="btn btn-danger m-2" onclick="clearCart()">Clear Cart</button>
-</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark pt-4 bg-primary mt-4">
