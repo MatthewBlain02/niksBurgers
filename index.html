@@ -36,8 +36,9 @@
                         Account
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        <li id="signup-login"><a class="dropdown-item" href="signup.html">Sign Up/Login</a></li>
+                        <li id="dashboard" style="display: none;"><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                        <li id="logout" style="display: none"><a class="dropdown-item" onclick="changeNav('out')">Logout</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link" href="contact.html">Customer Support</a></li>

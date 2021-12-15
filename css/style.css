@@ -60,3 +60,9 @@ table {
 #cartDropdown{
     padding: 2em;
 }
+#checkout-food{
+    width: 30%;
+}
+#checkout-form{
+    width: 70%;
+}
