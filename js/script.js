@@ -1,3 +1,8 @@
+localStorage.setItem('name-John Smith','John Smith');
+localStorage.setItem('email-John Smith','johnsmith@test.ie');
+localStorage.setItem('password-John Smith','password');
+localStorage.setItem('address-John Smith','123 Main Street');
+localStorage.setItem('phone-John Smith','0861234567');
 window.onload = function checkedLogged(){
     if(localStorage.getItem('logged') === '1'){
         changeNav('log');
