@@ -48,9 +48,12 @@ function addToCart(item){
 }
 
 function clearCart(){
-    document.getElementById('cart').innerHTML = null;
-    document.getElementById('total').innerHTML = null;
-    document.getElementById('totalItemsInCart').innerHTML = '0';
+   let cart = document.getElementById('cart');
+    let total = document.getElementById('total');
+    let itemCount = document.getElementById('totalItemsInCart');
+    cart = null;
+    total = null;
+    itemCount = '0';
     localStorage.removeItem('cart');
     localStorage.removeItem('cartTotal');
 
@@ -95,8 +98,6 @@ function saveDetails(){
     localStorage.setItem('address-'+name,address);
     localStorage.setItem('phone-'+name,phone);
     alert('Thank You For Signing Up To Niks Burgers');
-    localStorage.setItem('logged','1');
-    changeNav('log');
     changeForm('log');
 }
 function login(){
