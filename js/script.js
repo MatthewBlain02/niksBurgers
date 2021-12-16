@@ -1,15 +1,7 @@
 window.onload = function checkedLogged(){
-    console.log('I am in here fuck you bitch');
     if(localStorage.getItem('logged') === '1'){
         changeNav('log');
-    }
-    if(localStorage.getItem('cart') != null) {
-        let cart = localStorage.getItem('cart');
-        let cartTotal = localStorage.getItem('cartTotal');
-        let cartInt = localStorage.getItem('cartInt');
-        document.getElementById('cart').innerHTML = cart;
-        document.getElementById('total').innerHTML = cartTotal;
-        document.getElementById('totalItemsInCart').innerHTML = cartInt.toString();
+        fillDashboard();
     }
 }
 function addToCart(item){
@@ -56,14 +48,11 @@ function addToCart(item){
 }
 
 function clearCart(){
-    let cart = document.getElementById('cart');
-    let total = document.getElementById('total');
-    let itemCount = document.getElementById('totalItemsInCart');
+    document.getElementById('cart').innerHTML = null;
+    document.getElementById('total').innerHTML = null;
+    document.getElementById('totalItemsInCart').innerHTML = '0';
     localStorage.removeItem('cart');
     localStorage.removeItem('cartTotal');
-    total.innerHTML = '0';
-    cart.innerHTML = '';
-    itemCount.innerHTML = '0';
 
 
 }
@@ -116,9 +105,6 @@ function login(){
     if(localStorage.getItem('name-'+name) != null){
         if(localStorage.getItem('password-'+name) === password){
             localStorage.setItem('name',localStorage.getItem('name-'+name));
-            localStorage.setItem('email',localStorage.getItem('email-'+name));
-            localStorage.setItem('address',localStorage.getItem('address-'+name));
-            localStorage.setItem('phone',localStorage.getItem('phone-'+name));
             localStorage.setItem('logged','1');
             changeForm('reg');
             alert('Hello ' + name + ' Welcome Back');
@@ -153,7 +139,7 @@ function changeNav(type){
             localStorage.removeItem('email');
             localStorage.removeItem('address');
             localStorage.removeItem('phone');
-
+            window.location.href = 'index.html';
 
 
     }
@@ -164,7 +150,43 @@ function completeOrder(){
     let cardDetails = document.getElementById('payment-info-card').value;
     clearCart();
     alert('Order Confirmed'+name+', Payment Received From Card ' + cardDetails + ' And Will Be Delivered To '+address);
-    window.reload();
+    window.location.href = 'order.html'
 
 
+}
+function fillDashboard(){
+    let name = localStorage.getItem('name');
+        document.getElementById('dashboard-name').value = name;
+        document.getElementById('dashboard-email').value = localStorage.getItem('email-'+name);
+        document.getElementById('dashboard-password').value = localStorage.getItem('password-'+name);
+        document.getElementById('dashboard-address').value = localStorage.getItem('address-'+name);
+        document.getElementById('dashboard-phone').value = localStorage.getItem('phone-'+name);
+        document.getElementById('dashboard-card').value = localStorage.getItem('card-'+name);
+        document.getElementById('dashboard-nameOnCard').value = localStorage.getItem('nameOnCard-'+name);
+
+}
+function updateDetails(){
+    let name = document.getElementById('dashboard-name').value;
+    let email = document.getElementById('dashboard-email').value;
+    let password = document.getElementById('dashboard-password').value;
+    let address = document.getElementById('dashboard-address').value;
+    let phone = document.getElementById('dashboard-phone').value;
+    let card = document.getElementById('dashboard-card').value;
+    let nameOnCard = document.getElementById('dashboard-nameOnCard').value;
+    let checkPassword = prompt('Please Enter Current Password');
+    let currentPassword = localStorage.getItem('password-'+name);
+    if(checkPassword === currentPassword){
+        localStorage.setItem('name-'+name,name);
+        localStorage.setItem('name',name);
+        localStorage.setItem('email-'+name,email);
+        localStorage.setItem('password-'+name,password);
+        localStorage.setItem('address-'+name,address);
+        localStorage.setItem('phone-'+name,phone);
+        localStorage.setItem('card-'+name,card);
+        localStorage.setItem('nameOnCard-'+name,nameOnCard);
+        alert('Details Uploaded');
+    }
+    else{
+        alert('Incorrect Password Entered')
+    }
 }

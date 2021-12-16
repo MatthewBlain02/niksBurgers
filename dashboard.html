@@ -26,13 +26,13 @@
         <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="order.html">Order</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Account
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,65 +46,72 @@
         </div>
     </div>
 </nav>
-<!-- Welcome Text And Image -->
-<div class="row align-items-center">
-    <div class="col me-5 text-center ms-5 mt-4">
-        <img class="img-thumbnail" src="img/NiksBurgersLogo.png" alt="">
-    </div>
-    <div class="col mx-5 text-center">
-        <h1 class="display-2 text-center">Welcome To Niks Burgers</h1>
-        <p class="lead text-center mt-3">100% Irish Beef | Only Use Quality Food</p>
-        <a href="order.html" class="btn btn-primary mt-4">Order Now!</a>
-    </div>
+<!-- Main -->
+<div class="text-center">
+    <h2 class="m-3">Dashboard</h2>
+    <h3 class="text-start m-2">Contact Information</h3>
+    <form>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="dashboard-name" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-name"></label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="email" id="dashboard-email" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-email"></label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="password" id="dashboard-password" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-address"></label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="text" id="dashboard-address" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-address"></label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="number" id="dashboard-phone" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-phone">Your Name</label>
+        </div>
+        <h3 class="text-start m-2">Payment Information</h3>
+        <div class="form-outline mb-4">
+            <input type="number" id="dashboard-card" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-card">Card Number</label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="text" id="dashboard-nameOnCard" class="form-control form-control-lg"/>
+            <label class="form-label" for="dashboard-nameOnCard">Name On Card</label>
+        </div>
+
+        <button class="btn btn-primary" onclick="updateDetails()">Submit Details</button>
 </div>
-    <!-- Cards -->
-    <div class="container mt-4">
-  <div class="row">
-    <div class="col">
-      <div class="card border-info mx-5">
-        <img src="img/cow.jpg" class="card-img-top rounded mx-auto mt-2" alt="...">
-        <div class="card-body">
-            <p class="card-text text-center">Our Beef Comes From The Famous Sherlock's Butchers Fresh Everyday.</p>
-        </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4 bg-primary mt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Call to action -->
+        <ul class="list-unstyled text-center">
+            <li class="list-item text-center">
+                <h5 class="mb-2">Order Some Grub</h5>
+            </li>
+            <li class="list-item d-block">
+                <a href="order.html" class="link-info">Order Now!</a>
+            </li>
+        </ul>
+        <!-- Call to action -->
+
     </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
     </div>
-    <div class="col">
-      <div class="card border-info mx-5">
-            <img src="img/veg.jpg" class="card-img-top rounded mx-auto mt-2" alt="...">
-            <div class="card-body">
-                <p class="card-text text-center">We Get Fresh Food Delivered Everyday To Ensure We Give The Best Food.</p>
-            </div>
-        </div>
-    </div>
-  </div>
-    </div>
-        <!-- Footer -->
-        <footer class="page-footer font-small unique-color-dark pt-4 bg-primary mt-4">
+    <!-- Copyright -->
 
-            <!-- Footer Elements -->
-            <div class="container">
-
-                <!-- Call to action -->
-                <ul class="list-unstyled text-center">
-                    <li class="list-item text-center">
-                        <h5 class="mb-2">Order Some Grub</h5>
-                    </li>
-                    <li class="list-item d-block">
-                        <a href="order.html" class="link-info">Order Now!</a>
-                    </li>
-                </ul>
-                <!-- Call to action -->
-
-            </div>
-            <!-- Footer Elements -->
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            </div>
-            <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
+</footer>
+<!-- Footer -->
 </body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -113,6 +120,7 @@
     window.onload = function checkedLogged(){
         if(localStorage.getItem('logged') === '1'){
             changeNav('log');
+            fillDashboard();
         }
     }
 </script>

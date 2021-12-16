@@ -111,12 +111,18 @@
         let checkoutCart = document.getElementById('checkout-cart').innerHTML = localStorage.getItem('cart');
         let checkoutTotal = document.getElementById('checkout-total').innerHTML = localStorage.getItem('cartTotal');
         if (localStorage.getItem('logged')==='1'){
-            document.getElementById('customer-info-name').value = localStorage.getItem('name');
+            let name = localStorage.getItem('name');
+            document.getElementById('customer-info-name').value = localStorage.getItem('name-'+name);
             document.getElementById('customer-info-name').setAttribute('disabled','true');
-            document.getElementById('customer-info-email').value = localStorage.getItem('email');
+            document.getElementById('customer-info-email').value = localStorage.getItem('email-'+name);
             document.getElementById('customer-info-email').setAttribute('disabled','true');
-            document.getElementById('customer-info-address').value = localStorage.getItem('address');
-            document.getElementById('customer-info-phone').value = localStorage.getItem('phone');
+            document.getElementById('customer-info-address').value = localStorage.getItem('address-'+name);
+            document.getElementById('customer-info-phone').value = localStorage.getItem('phone-'+name);
+            document.getElementById('payment-info-card').value = localStorage.getItem('card-'+localStorage.getItem('name'));
+            document.getElementById('payment-info-card').setAttribute('disabled','true');
+            document.getElementById('payment-info-name').value = localStorage.getItem('nameOnCard-'+localStorage.getItem('name'));
+            document.getElementById('payment-info-name').setAttribute('disabled','true');
+
         }
     }
 </script>
